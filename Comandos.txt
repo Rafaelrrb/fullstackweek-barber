@@ -51,3 +51,15 @@ volumes:
   Rodar comandos
     sudo docker-compose up -d
     sudo docker ps
+
+Populando banco de dados 
+  -Criar aquivo seed.ts 
+  -Adicionar ao package.json
+    "prisma": {
+      "seed": "ts-node prisma/seed.ts"
+    },
+  -Roda o arquivo
+    npx prisma db seed
+
+npm i -D ts-node typescript @types/node
+  Para executar codigo ts 
