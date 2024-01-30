@@ -1,0 +1,53 @@
+Criando o projeto com next
+  Comando para criar 
+    npx create-next-app@latest .
+    Need to install the following packages:
+    create-next-app@14.1.0
+    Ok to proceed? (y) y
+    ✔ Would you like to use TypeScript? … Yes
+    ✔ Would you like to use ESLint? … Yes
+    ✔ Would you like to use Tailwind CSS? … Yes
+    ✔ Would you like to use `src/` directory? … No
+    ✔ Would you like to use App Router? (recommended) … Yes
+    ✔ Would you like to customize the default import alias (@/*)? … No
+
+Prisma (https://www.prisma.io/docs/getting-started/quickstart)
+  npm install prisma --save-dev
+  Define o banco de dados usado 
+    npx prisma init --datasource-provider postgresql
+
+  Depois de criar os models no schema rodar 
+    npx prisma format
+
+  Cria migrations
+    npx prisma migrate dev --name add_initial_tables
+
+  Para ver as tabelas criadas no prisma 
+    npx prisma studio
+
+supabase
+  Project Settings->Database-> Connection string (escolher nodejs) desmarque (Use connection pooling) copiar link -> abrir .env e colar a o link em DATABASE_URL botando a senha
+
+Caso de problema no supabase use docker 
+  Crieo do arquivo docker-compose.yml
+    
+version: '3'
+
+services:
+    postgres:
+        image: postgres:latest
+        container_name: fsw-v3-postgres
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: password
+        ports:
+            - '5432:5432'
+        volumes:
+            - ./.postgres-data:/var/lib/postgresql/data
+
+volumes:
+    .postgres-data:
+
+  Rodar comandos
+    sudo docker-compose up -d
+    sudo docker ps
