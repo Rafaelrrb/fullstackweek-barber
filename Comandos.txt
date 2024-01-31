@@ -73,6 +73,7 @@ Shadcn/ui (https://ui.shadcn.com/docs/installation/next)
 Componentes Shadcn
   npx shadcn-ui@latest add card
   npx shadcn-ui@latest add button
+  npx shadcn-ui@latest add input
 
 Para formata a data 
   npm i date-fns
