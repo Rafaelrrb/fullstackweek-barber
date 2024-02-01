@@ -15,7 +15,7 @@ interface BarbershopInfoProps{
 export function BarbershopInfo({barbershop}:BarbershopInfoProps){
   const router = useRouter()
   const handleBackClick = ()=>{
-    router.back();
+    router.replace('/');
   }
   return(
     <div>
@@ -24,8 +24,6 @@ export function BarbershopInfo({barbershop}:BarbershopInfoProps){
       <Button onClick={handleBackClick} size="icon" variant="outline" className="z-50 absolute top-4 left-4">
         <ChevronLeftIcon/>
       </Button>
-
-      
 
       <Sheet>
         <SheetTrigger asChild>
