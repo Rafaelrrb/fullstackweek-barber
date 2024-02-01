@@ -82,3 +82,9 @@ Componentes Shadcn
 
 Para formata a data 
   npm i date-fns
+
+Para autenticar (https://next-auth.js.org/getting-started/example)
+  npm install next-auth
+
+  Conectar ao prisma
+    npm i @auth/prisma-adapter
