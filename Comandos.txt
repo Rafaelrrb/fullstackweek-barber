@@ -88,3 +88,5 @@ Para autenticar (https://next-auth.js.org/getting-started/example)
 
   Conectar ao prisma
     npm i @auth/prisma-adapter
+
+  Google (https://next-auth.js.org/providers/google#configuration)
