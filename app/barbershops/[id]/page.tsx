@@ -38,7 +38,7 @@ export default async function BarbershopDetailsPage({params}:BarbershopDetailsPa
 
     <div className="px-5 py-6 flex flex-col gap-3">
       {barbershop.services.map((service: Service)=>(
-        <ServiceItem key={service.id} service={service} isAuthenticated={!!section?.user}/>
+        <ServiceItem key={service.id} barbershop={barbershop} service={service} isAuthenticated={!!section?.user}/>
        ))}
     </div>
    </div>
