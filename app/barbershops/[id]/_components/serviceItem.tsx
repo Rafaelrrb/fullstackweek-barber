@@ -38,14 +38,14 @@ export function ServiceItem({barbershop,service,isAuthenticated}: ServiceItemPro
     }
 
     const refreshAvailableHours = async () =>{
-      const _dayBoolings = await getDayBookings(date)
+      const _dayBoolings = await getDayBookings(barbershop.id,date)
 
       setDayBookings(_dayBoolings)
     }
 
     refreshAvailableHours()
 
-  },[date])
+  },[date,barbershop.id])
 
   const handleDateClick=(date: Date | undefined)=>{
     setDate(date)
