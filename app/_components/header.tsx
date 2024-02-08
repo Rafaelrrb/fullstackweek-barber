@@ -5,13 +5,16 @@ import { Button } from "./ui/button";
 import { MenuIcon } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { SideMenu } from "./sideMenu";
+import Link from "next/link";
 
 export function Header() {
   
   return(
     <Card>
       <CardContent className="p-5 justify-between flex flex-row items-center">
-        <Image alt="FSW Barber" src="/logo.png" height={22} width={120}/>
+        <Link href="/">
+          <Image alt="FSW Barber" src="/logo.png" height={22} width={120}/>
+        </Link>
 
        <Sheet>
         <SheetTrigger asChild>
