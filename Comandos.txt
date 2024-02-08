@@ -32,7 +32,7 @@ Para mudar de um banco de dados para o outro
   npx prisma db push
 
 Caso de problema no supabase use docker 
-  Crieo do arquivo docker-compose.yml
+  Crie o arquivo docker-compose.yml
     
 version: '3'
 
