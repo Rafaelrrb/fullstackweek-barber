@@ -82,6 +82,7 @@ Componentes Shadcn
   npx shadcn-ui@latest add sheet
   npx shadcn-ui@latest add calendar
   npx shadcn-ui@latest add sonner
+  npx shadcn-ui@latest add alert-dialog
 
 Para formata a data 
   npm i date-fns

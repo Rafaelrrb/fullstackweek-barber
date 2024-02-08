@@ -9,6 +9,6 @@ export default async function cancelBooking(bookingId : string){
       id: bookingId
     }
   })
-
+  revalidatePath('/')
   revalidatePath('/bookings')
 }
