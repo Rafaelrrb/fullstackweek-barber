@@ -1,11 +1,11 @@
 import { getServerSession } from "next-auth";
 import { Header } from "../_components/header";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+
 import { redirect } from "next/navigation";
 import { db } from "../_lib/prisma";
 import { BookingItem } from "../_components/bookingItem";
 import { Booking } from "@prisma/client";
-import { isFuture, isPast } from "date-fns";
+import { authOptions } from "../_lib/auth";
 
 export default async function BookingsPage() {
   const session = await getServerSession(authOptions)
