@@ -16,7 +16,11 @@ const formSchema = z.object({
   }).trim().min(1,"Campo obrigatório.")
 })
 
-export function Search () {
+interface SearchProps {
+  defaultValues?: z.infer<typeof formSchema>;
+}
+
+export function Search ({defaultValues}:SearchProps) {
   const router = useRouter();
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -24,7 +28,8 @@ export function Search () {
   })
 
   const handleSubmit = (data: z.infer<typeof formSchema>) => {
-    router.push(`/barbershops?search=${data.search}`);
+    router.push(`/barbershops?search=${data.search}`),
+    defaultValues
   };
 
   return(
